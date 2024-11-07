@@ -17,12 +17,14 @@ const Styled = styled.main`
         display: flex;
         flex-direction: column;
         gap: 30px;
-        height: 60vh;
+        height: 70vh;
         justify-content: center;
+        padding-bottom: 30px;
+        padding-top: 30px;
         &::before{
             background: rgba(255, 255, 255, 0.6);
             content: '';
-            height: 60vh;
+            height: 70vh;
             position: absolute; top: 0; left: 0; right: 0;
             z-index: 1;
         }
@@ -31,13 +33,13 @@ const Styled = styled.main`
             z-index: 2;
         }
         h2{
-            font-size: 2rem;
+            font-size: clamp(1.3rem, 1.5vw + 0.8rem, 2rem);
         }
         h1{
-            font-size: 3.45rem;
+            font-size: clamp(2rem, 3vw + 1rem, 3.5rem);
         }
         span{
-            font-size: 1.2rem;
+            font-size: clamp(0.9rem, 1vw + 0.4rem, 1.2rem);
         }
     }
     .presentation{
@@ -96,6 +98,7 @@ export default function Home(){
     return (
         <Styled>
             <section className='container cover'>
+                {/* <div className='blur' /> */}
                 <h2>Curso de Atualização</h2>
                 <h1>Genética e Saúde de Precisão</h1>
                 <span>
