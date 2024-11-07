@@ -22,7 +22,7 @@ const Styled = styled.main`
         padding-bottom: 30px;
         padding-top: 30px;
         &::before{
-            background: rgba(255, 255, 255, 0.6);
+            background: rgba(255, 255, 255, 0.7);
             content: '';
             height: 70vh;
             position: absolute; top: 0; left: 0; right: 0;
@@ -37,23 +37,26 @@ const Styled = styled.main`
         }
         h1{
             font-size: clamp(2rem, 3vw + 1rem, 3.5rem);
+            text-align: center;
         }
         span{
             font-size: clamp(0.9rem, 1vw + 0.4rem, 1.2rem);
         }
     }
-    .presentation{
+    .section{
         display: flex;
         flex-direction: column;
         gap: 30px;
         padding-bottom: 60px;
         padding-top: 60px;
         h2{
-            font-size: 2.5rem;
+            font-size: clamp(2rem, 3vw + 1rem, 3rem);
         }
         p{
-            font-size: 1.2rem;
+            font-size: clamp(0.9rem, 1vw + 0.4rem, 1.2rem);
         }
+    }
+    .presentation{
         .topics{
             display: flex;
             gap: 25px;
@@ -75,6 +78,12 @@ const Styled = styled.main`
             }
         }
     }
+    .structure{
+        .topics{
+            display: flex;
+            gap: 25px;
+        }
+    }
     @media(max-width: 650px){
         .container{
             padding-left: 6%;
@@ -91,6 +100,11 @@ const Styled = styled.main`
                 flex-direction: column;
             }
         }
+        .structure{
+            .topics{
+                flex-direction: column;
+            }
+        }
     }
 `;
 
@@ -98,7 +112,6 @@ export default function Home(){
     return (
         <Styled>
             <section className='container cover'>
-                {/* <div className='blur' /> */}
                 <h2>Curso de Atualização</h2>
                 <h1>Genética e Saúde de Precisão</h1>
                 <span>
@@ -107,7 +120,7 @@ export default function Home(){
                 <h3>EVENTO GRATUITO</h3>
                 <Button name='Inscreva-se Agora' />
             </section>
-            <section className='container presentation'>
+            <section className='container section presentation'>
                 <h2>A Saúde de Precisão</h2>
                 <p>A saúde de precisão está transformando a abordagem clínica, oferecendo terapias e estratégias de prevenção adaptadas às características genéticas e biopsicossociais de cada indivíduo. Com o avanço do sequenciamento genético e das análises bioinformáticas, os profissionais de saúde agora têm acesso a uma poderosa ferramenta para guiar decisões clínicas.</p>
                 <div className='topics'>
@@ -131,6 +144,26 @@ export default function Home(){
                             <h3>Monitoramento Contínuo</h3>
                             <p>Acompanhe a evolução do indivíduo com base em biomarcadores genéticos.</p>
                         </div>
+                    </div>
+                </div>
+            </section>
+            <section className='container section structure'>
+                <h2>Estrutura do Curso</h2>
+                <div className='topics'>
+                    <div className='topic'>
+                        <img src="#" alt="" />
+                        <h3>Formato Híbrido</h3>
+                        <p>Oito horas presenciais no BioHub do Tecnopuc combinadas com 4 horas online via Zoom para uma experiência de aprendizado flexível e abrangente.</p>
+                    </div>
+                    <div className='topic'>
+                        <img src="#" alt="" />
+                        <h3>Metodologia Interativa</h3>
+                        <p>Aulas expositivas, discussões em grupo, estudos de caso e demonstrações de uso de ferramentas de análise genética.</p>
+                    </div>
+                    <div className='topic'>
+                        <img src="#" alt="" />
+                        <h3>Conteúdo Multidisciplinar</h3>
+                        <p>Abordagem integrada cobrindo  nutrigenética, farmacogenética, oncogenética, com foco em aplicações práticas.</p>
                     </div>
                 </div>
             </section>

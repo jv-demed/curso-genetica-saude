@@ -8,6 +8,9 @@ const Styled = styled.button`
     cursor: pointer;
     font-size: 1.2rem;
     padding: 15px 20px;
+    @media(max-width: 650px){
+        width: 100%;
+    }
 `;
 
 export function Button({ name, action }){
