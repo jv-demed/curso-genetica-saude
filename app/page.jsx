@@ -224,6 +224,7 @@ const Styled = styled.main`
         height: 10vh;
         justify-content: center;
         margin-top: 50px;
+        text-align: center;
     }
     @media(max-width: 650px){
         .container{
