@@ -377,6 +377,12 @@ export default function Home(){
                             <p>Abordagem integrada cobrindo  nutrigenética, farmacogenética, oncogenética, com foco em aplicações práticas.</p>
                         </div>
                     </div>
+                    <section className='container section-btn'>
+                        <h3>EVENTO GRATUITO</h3>
+                        <Button name='Inscreva-se Agora' 
+                            action={() => window.open('https://forms.office.com/r/Q0BkFr8aEn', '_blank')}
+                        />
+                    </section>
                 </section>
             </FadeInBox>
             <FadeInBox>
