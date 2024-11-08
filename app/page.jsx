@@ -173,6 +173,18 @@ const Styled = styled.main`
             gap: 25px;
         }
     }
+    .section-btn{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        h3{
+            border: 1px solid #204C8E;
+            border-radius: 10px;
+            color: #204C8E;
+            padding: 5px 10px;
+        }
+    }
     .benefits{
         .topics{
             display: flex;
@@ -215,11 +227,6 @@ const Styled = styled.main`
                     color: #204C8E;
                 }
             }
-        }
-        .actions{
-            justify-content: center;
-            display: flex;
-            margin-top: 20px;
         }
     }
     .organizations{
@@ -438,6 +445,14 @@ export default function Home(){
                 </section>
             </FadeInBox>
             <FadeInBox>
+                <section className='container section-btn'>
+                    <h3>EVENTO GRATUITO</h3>
+                    <Button name='Inscreva-se Agora' 
+                        action={() => window.open('https://forms.office.com/r/Q0BkFr8aEn', '_blank')}
+                    />
+                </section>
+            </FadeInBox>
+            <FadeInBox>
                 <section className='container section benefits'>
                     <h2>Benefícios</h2>
                     <p>Participar deste curso de atualização enriquecerá seu conhecimento e trará novas perspectivas em sua carreira profissional.</p>
@@ -484,7 +499,8 @@ export default function Home(){
                             <p>40 (limitadas)</p>
                         </div>
                     </div>
-                    <div className='actions'>
+                    <div className='section-btn'>
+                        <h3>EVENTO GRATUITO</h3>
                         <Button name='Inscreva-se Agora' 
                             action={() => window.open('https://forms.office.com/r/Q0BkFr8aEn', '_blank')}
                         />
