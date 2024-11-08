@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 const Styled = styled.button`
-    background-color: #1B54DA;
+    /* background-color: #1B54DA; */
+    background: linear-gradient(30deg, #411bda 0%, #1bb4da 100%);
     border: none;
     border-radius: 5px;
     color: white;
@@ -17,7 +18,7 @@ const Styled = styled.button`
 export function Button({ name, width, action }){
     return (
         <Styled 
-            action={action}
+            onClick={action}
             $width={width || 'auto'}
         >
             {name}
