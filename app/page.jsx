@@ -133,7 +133,7 @@ const Styled = styled.main`
                     display: flex;
                     gap: 15px;
                     .icon{
-                        color: #1B54DA;
+                        color: #204C8E;
                         font-size: 2.2rem;
                     }
                     h3{
