@@ -321,12 +321,12 @@ export default function Home(){
                         <p>Oito horas presenciais no BioHub do Tecnopuc combinadas com 4 horas online via Zoom para uma experiência de aprendizado flexível e abrangente.</p>
                     </div>
                     <div className='topic'>
-                        <img src='/imgs/img3.jpg' alt='Equipe de pessoas da área da saúde' />
+                        <img src='/imgs/img1.jpg' alt='Equipe de pessoas da área da saúde' />
                         <h3>Metodologia Interativa</h3>
                         <p>Aulas expositivas, discussões em grupo, estudos de caso e demonstrações de uso de ferramentas de análise genética.</p>
                     </div>
                     <div className='topic'>
-                        <img src='/imgs/img1.jpg' alt='Sala de aula com alunos' />
+                        <img src='/imgs/img3.jpg' alt='Sala de aula com alunos' />
                         <h3>Conteúdo Multidisciplinar</h3>
                         <p>Abordagem integrada cobrindo  nutrigenética, farmacogenética, oncogenética, com foco em aplicações práticas.</p>
                     </div>
