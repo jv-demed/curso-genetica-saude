@@ -8,14 +8,18 @@ const Styled = styled.button`
     cursor: pointer;
     font-size: 1.2rem;
     padding: 15px 20px;
+    width: ${({ $width }) => $width};
     @media(max-width: 650px){
         width: 100%;
     }
 `;
 
-export function Button({ name, action }){
+export function Button({ name, width, action }){
     return (
-        <Styled action={action}>
+        <Styled 
+            action={action}
+            $width={width || 'auto'}
+        >
             {name}
         </Styled>
     );

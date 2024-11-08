@@ -2,6 +2,7 @@
 import styled from 'styled-components';
 import { Button } from '@/components/Button';
 import { ICONS } from '@/assets/icons';
+import { ContentDisclosure } from '@/components/ContentDisclosure';
 
 const Styled = styled.main`
     color: #25252C;
@@ -46,6 +47,7 @@ const Styled = styled.main`
             z-index: 2;
         }
         h2{
+            color: #204C8E;
             font-size: clamp(1.3rem, 1.5vw + 0.8rem, 2rem);
         }
         h1{
@@ -62,7 +64,7 @@ const Styled = styled.main`
         flex-direction: column;
         gap: 30px;
         padding-bottom: 80px;
-        padding-top: 80px;
+        padding-top: 60px;
         h2{
             color: #204C8E;
             font-size: clamp(2rem, 3vw + 1rem, 3rem);
@@ -89,6 +91,7 @@ const Styled = styled.main`
                 }
                 .text{
                     h3{
+                        color: #204C8E;
                         font-size: 1.25rem;
                     }
                 }
@@ -111,6 +114,7 @@ const Styled = styled.main`
                     width: 100%;
                 }
                 h3{
+                    color: #204C8E;
                     font-size: 1.25rem;
                 }
             }
@@ -130,10 +134,10 @@ const Styled = styled.main`
                 width: 100%;
                 .name{
                     align-items: center;
+                    color: #204C8E;
                     display: flex;
                     gap: 15px;
                     .icon{
-                        color: #204C8E;
                         font-size: 2.2rem;
                     }
                     h3{
@@ -142,6 +146,84 @@ const Styled = styled.main`
                 }
             }
         }
+    }
+    .content{
+        .topics{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+    }
+    .benefits{
+        .topics{
+            display: flex;
+            gap: 15px;
+            .topic{
+                background-color: #D2DDF8;
+                border: 1px solid #C1CCE8;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 15px 20px;
+                width: 100%;
+                h3{
+                    color: #204C8E;
+                }
+            }
+        }
+    }
+    .inscription{
+        background-color: #AFCBF8;
+        .topics{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            row-gap: 30px;
+            .topic{
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                text-align: center;
+                width: 350px;
+                .icon{
+                    color: #204C8E;
+                    font-size: 2rem;
+                }
+                h3{
+                    color: #204C8E;
+                }
+            }
+        }
+        .actions{
+            justify-content: center;
+            display: flex;
+            margin-top: 20px;
+        }
+    }
+    .organizations{
+        .topics{
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-around;
+            width: 100%;
+            img{
+                width: 220px;
+            }
+        }
+    }
+    footer{
+        align-items: center;
+        background-color: gray;
+        color: white;
+        display: flex;
+        height: 10vh;
+        justify-content: center;
+        margin-top: 50px;
     }
     @media(max-width: 650px){
         .container{
@@ -154,6 +236,10 @@ const Styled = styled.main`
                 height: 70vh;
             }
         }
+        .section{
+            padding-bottom: 50px;
+            padding-top: 40px;
+        }
         .presentation{
             .topics{
                 flex-direction: column;
@@ -162,6 +248,7 @@ const Styled = styled.main`
         .structure{
             .topics{
                 flex-direction: column;
+                gap: 35px;
                 .topic{
                     img{
                         height: 250px
@@ -170,6 +257,11 @@ const Styled = styled.main`
             }
         }
         .professionals{
+            .topics{
+                flex-direction: column;
+            }
+        }
+        .benefits{
             .topics{
                 flex-direction: column;
             }
@@ -274,6 +366,93 @@ export default function Home(){
                     </div>
                 </div>
             </section>
+            <section className='container section content'>
+                <h2>Conteúdo Programático</h2>
+                <p>Nosso programa abrange desde os fundamentos da genética até as aplicações avançadas da medicina personalizada. Cada módulo foi elaborado para proporcionar uma compreensão teórica e prática de conceitos essenciais da área.</p>
+                <div className='topics'>
+                    <ContentDisclosure 
+                        name='Dia 1 - Presencial (8 horas)'
+                        contents={[
+                            'Introdução à Genética e Saúde de Precisão;',
+                            'Farmacogenética: Conceitos e Aplicações Clínicas;',
+                            'Nutrigenética: Personalização da Dieta Baseada em Genética;',
+                            'Estudo de Caso: Interpretação de Relatório Genético.'
+                        ]}
+                    />
+                    <ContentDisclosure 
+                        name='Dia 2 - Online (4 horas)'
+                        contents={[
+                            'Oncogenética e Medicina Personalizada;',
+                            'Ferramentas e Bancos de Dados Genéticos;',
+                            'Workshop Prático: Desenvolvendo Planos de Cuidado Personalizados.'
+                        ]}
+                    />
+                    <ContentDisclosure 
+                        name='Metodologia de Ensino'
+                        contents='Combinamos aulas expositivas, estudos de caso, discussões em grupo e demonstrações de ferramentas avançadas para garantir uma aprendizagem completa e aplicável.'
+                    />
+                </div>
+            </section>
+            <section className='container section benefits'>
+                <h2>Benefícios</h2>
+                <p>Participar deste curso de atualização enriquecerá seu conhecimento e trará novas perspectivas em sua carreira profissional.</p>
+                <div className='topics'>
+                    <div className='topic'>
+                        <h3>Expertise Diferenciada</h3>
+                        <p>Destaque-se no mercado com conhecimentos em genética e medicina de precisão, oferecendo um atendimento de qualidade aos seus pacientes.</p>
+                    </div>
+                    <div className='topic'>
+                        <h3>Prática Clínica Aprimorada</h3>
+                        <p>Aplique os conhecimentos adquiridos, melhorando seus diagnósticos, tratamentos e estratégias de cuidado.</p>
+                    </div>
+                </div>
+            </section>
+            <section className='container section inscription'>
+                <h2>Inscrição</h2>
+                <p>As vagas são limitadas para garantir uma experiência de aprendizado personalizada e de alta qualidade. Não perca esta oportunidade única!</p>
+                <div className='topics'>
+                    <div className='topic'>
+                        <ICONS.calendar className='icon' />
+                        <h3>Data</h3>
+                        <p>06 e 07 de dezembro</p>
+                    </div>
+                    <div className='topic'>
+                        <ICONS.local className='icon' />
+                        <h3>Local</h3>
+                        <p>Presencial no BioHub, 6° andar do Tecnopuc, e Online via plataforma Zoom</p>
+                    </div>
+                    <div className='topic'>
+                        <ICONS.watch className='icon' />
+                        <h3>Carga horária</h3>
+                        <p>12 horas (8 presenciais + 4 online)</p>
+                    </div>
+                    <div className='topic'>
+                        <ICONS.peoples className='icon' />
+                        <h3>Público-alvo</h3>
+                        <p>Profissionais e estudantes da área da saúde</p>
+                    </div>
+                    <div className='topic'>
+                        <ICONS.people className='icon' />
+                        <h3>Vagas</h3>
+                        <p>40 (limitadas)</p>
+                    </div>
+                </div>
+                <div className='actions'>
+                    <Button name='Inscreva-se Agora' />
+                </div>
+            </section>
+            <section className='container section organizations'>
+                <h2>Organizadores</h2>
+                <div className='topics'>
+                    <img src='/imgs/logo.png' alt='Logo da Genis' />
+                    <img src='/imgs/biohub.png' alt='Logo da Biohub' />
+                    <img src='/imgs/tecnopuc.png' alt='Logo da Tecnopuc' />
+                    <img src='/imgs/fapergs.jpg' alt='Logo da Fapergs' />
+                </div>
+            </section>
+            <footer className='container'>
+                © Copyright 2023 | Genetics and Innovative Solutions | Todos os direitos reservados.
+            </footer>
         </Styled>
     );
 }
