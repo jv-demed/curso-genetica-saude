@@ -255,6 +255,11 @@ const Styled = styled.main`
             padding-left: 6%;
             padding-right: 6%;
         }
+        header{
+            a{
+                font-size: 0.8rem;
+            }
+        }
         .cover{
             height: 70vh;
             &::before{
